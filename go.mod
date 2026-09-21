@@ -1,4 +1,4 @@
-module github.com/bluenviron/gomavlib/v4
+module github.com/krmartin100/gomavlib/v4
 
 go 1.26.0
 

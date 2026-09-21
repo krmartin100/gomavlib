@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/bluenviron/gomavlib/v4/pkg/conversion"
+	"github.com/krmartin100/gomavlib/v4/pkg/conversion"
 )
 
 const testDialect = `<?xml version="1.0"?>
@@ -225,7 +225,7 @@ func TestConversionRelativeIncludes(t *testing.T) {
 </mavlink>
 `), 0o644))
 
-	require.NoError(t, Convert("dialects/main.xml", true))
+	require.NoError(t, conversion.Convert("dialects/main.xml", true))
 	_, err = os.Stat("main/message_sibling_message.go")
 	require.NoError(t, err)
 }
